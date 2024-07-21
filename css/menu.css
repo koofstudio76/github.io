@@ -1,0 +1,156 @@
+
+
+
+@font-face {
+   font-family: "Seminaria";
+   src: url(../fonts/Seminaria.ttf);
+   font-weight: bold;
+   font-style: normal;
+ }
+
+
+ .layout{position: absolute;top: 0;
+            width:100%;
+           left: 85%; 
+            top: -25vw;
+          height: 100%;}
+
+body{  position: relative;  
+    width: 100%;
+         margin: 0;
+         display: grid;
+         font-family: "Seminaria";
+         overflow-x: hidden;
+         padding: 0;
+         background-color: rgba(19, 44, 66, 0);
+         z-index: 0;
+         height: 100%; }
+
+
+header{position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0vh;
+  overflow: hidden;
+z-index: 9999999999999999999999999999999999999999999;
+}
+
+
+
+
+#nav1 ul li a{z-index: 999999999999;
+           color: #fff;
+           font-size: 4vw;
+
+       }
+
+       #nav1{position:fixed ;
+        text-decoration: none;
+        z-index: 99999;
+        width: 100vw;
+        height: 100%;
+        top: 250px;
+        right: -115vw;
+        z-index: 9999999999999999;
+        }
+        #nav1 ul li{list-style: none;line-height: 3vh;margin-top: 4vh;}
+        #nav1 ul li a{z-index: 999999999999;
+                   color: #fff;
+                   font-size: clamp(35px, 5vw, 58px);
+                   list-style: none;padding-top: 4vh;
+                   text-decoration: none;
+        
+               }
+#d_left{
+
+          height: 100vh;
+          width: 70%;
+          position:fixed;
+          top: 0;
+          left:-67%;
+          
+          background-position: right top;
+          z-index:19999999;
+        }
+       
+        
+        #d_right{
+          height: 100vh;
+          width:65vw;
+          position: fixed;
+          background-position: 110%;
+        background-repeat: no-repeat;
+        background-size:cover;
+          top: 0;
+          right: -70%;
+         z-index:19;
+        }
+       
+        .menu {
+          position: fixed;
+          right: 5%;
+          z-index: 95510;
+          padding: 25% clamp(2rem, 8vw, 7rem) 0;
+        }
+        .menu:before {
+          position: absolute;
+          content: "";
+          width: 5vw;
+          height: 5vw;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.1);
+          z-index: -1;
+          transform: scale(0);
+          transition: transform 0.5s ease;
+        }
+        .menu:hover:before {
+          transform: scale(1);
+        }
+               
+        @media (max-width:768px) {
+          #d_left{left: -96vw;width: 95vw;background-position: right;}
+          #d_right{
+            height: 100vh;
+            width:95vw;
+            position: fixed;
+            background-position:left;
+          background-repeat: no-repeat;
+          
+            top: 0;
+            right: -110%;
+           z-index:19;
+          }
+         
+        }
+
+
+/* 3.4 Video
+/*----------------------------------------------*/
+.video-section.jarallax{
+  min-height: 825px;
+}
+/* overide */
+.modal-dialog {
+  max-width: 800px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.modal-content {
+  padding: 0;
+  background-color: #f5f3ef;
+  border: none;
+  border-radius: 0
+}
+.text-pattern {
+  animation: rotation 50s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
